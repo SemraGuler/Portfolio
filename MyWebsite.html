@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<p> Temperature Converter </p>
+	<label for="labelTemp">Please enter the temperature value: </label>
+	<input type="number" name="inputTemp" id="tempId">
+	<br />
+
+	<button type="button" style="margin:15px" onclick="convertTocelcius()">
+		Convert To Celcius</button>
+	<br />
+
+	<label for="result">Result: </label>
+	<output type="number" id="resultId"></output>
+
+<script>
+function convertTocelcius() {
+	var temp=document.getElementById("tempId").value;
+	var celciusTemp = (temp - 32) * (5/9);
+	document.getElementById("resultId").innerHTML=celciusTemp + " Celcius";
+}
+
+</script>
+</body>
+</html>
